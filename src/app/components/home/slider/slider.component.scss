@@ -1,14 +1,12 @@
-@import "../../../../main-styles.scss";
-
 #slider h1 {
     font-weight: 700;
-    color: $dark-blue;
+    color: rgb(40, 48, 67);
 }
 
 #slider h2 {
     font-weight: 100;
     font-size: 20px;
-    color: $dark-blue;
+    color: rgb(40, 48, 67);
 }
 
 .avatar {
@@ -26,11 +24,6 @@
     max-width: 100%;
 }
 
-.epicentro {
-}
-
-.el {
-}
 .small {
     height: 30px;
     width: 30px;
@@ -38,10 +31,10 @@
 }
 
 .my-custom-class .tooltip-inner {
-    background-color: $soft-red;
+    background-color: #f02d3a;
     font-size: 125%;
-    color: $white;
+    color: #eff6ee;
 }
 .my-custom-class .arrow::before {
-    border-top-color: $dark-blue;
+    border-top-color: rgb(40, 48, 67);
 }

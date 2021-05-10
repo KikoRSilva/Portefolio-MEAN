@@ -9,9 +9,9 @@ import anime from 'animejs/lib/anime.es.js';
 export class SliderComponent implements OnInit, AfterViewInit {
     avatar: string = '/assets/avatar.png';
     hero: string = '/assets/hero1.png';
-    animation;
+    animation: any;
     running: boolean = false;
-    languageLogos = [
+    languageLogos: string[] = [
         '/assets/logos/c.svg',
         '/assets/logos/css.svg',
         '/assets/logos/java.svg',

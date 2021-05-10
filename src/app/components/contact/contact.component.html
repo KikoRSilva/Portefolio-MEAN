@@ -1,0 +1,122 @@
+<div id="form-page" class="animate-fadeUp">
+    <div class="top-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img
+                        src="/assets/avatar.png"
+                        class="img-fluid avatar-contact"
+                    />
+                    <h1 class="title">
+                        Obrigado por me procurar. Como que posso ajudar?
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-form pb-5">
+        <div class="container">
+            <form [formGroup]="newMessageForm">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="field">
+                            <label class="label">Nome</label>
+                            <div class="control is-expanded">
+                                <input
+                                    class="input is-large"
+                                    name="name"
+                                    type="text"
+                                    required
+                                    formControlName="name"
+                                    #name
+                                    [ngClass]="{
+                                        'is-valid': name.valid,
+                                        'is-invalid': name.invalid
+                                    }"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control is-expanded">
+                                <input
+                                    class="input is-large"
+                                    name="email"
+                                    type="email"
+                                    required
+                                    formControlName="email"
+                                    #email
+                                    [ngClass]="{
+                                        'is-valid': email.valid,
+                                        'is-invalid': email.invalid
+                                    }"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="field">
+                            <label class="label">Mensagem</label>
+                            <div class="control is-expanded">
+                                <textarea
+                                    class="textarea is-large"
+                                    name="message"
+                                    rows="5"
+                                    required
+                                    formControlName="text"
+                                    #message
+                                    [ngClass]="{
+                                        'is-valid': message.valid,
+                                        'is-invalid': message.invalid
+                                    }"
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div class="field is-hidden">
+                            <label class="is-hidden"></label>
+                            <div class="control is-expanded is-hidden">
+                                <input
+                                    class="is-hidden"
+                                    name="bot_vortex"
+                                    type="hidden"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div class="field">
+                            <div class="control">
+                                <button
+                                    class="btn button btn-outline-danger is-fullwidth"
+                                    type="submit"
+                                    (click)="sendForm()"
+                                    [disabled]="!newMessageForm.valid"
+                                >
+                                    Submeter
+                                </button>
+                            </div>
+                        </div>
+                        <div *ngIf="errorMessage" class="mt-1">
+                            <div class="alert alert-warning" role="alert">
+                                <i class="fas fa-times"></i> Algo correu mal...
+                                Tente novamente!
+                            </div>
+                        </div>
+                        <div *ngIf="successMessage" class="mt-1">
+                            <div class="alert alert-success" role="alert">
+                                <i class="fas fa-check"></i> Mensagem enviada
+                                com sucesso!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="blue-box my-5">
+    <div class="container">
+        <div class="mensagem">
+            <h1 class="text-white text-center">Mensagem</h1>
+
+            <div class="mensagem-nome mb-3">
+                <label for="nome" class="mb-1 fw-bold">Nome do remetente</label>
+                <div id="nome">
+                    <p>{{ mensagem.name }}</p>
+                </div>
+            </div>
+            <div class="mensagem-email mb-3">
+                <label for="email" class="mb-1 fw-bold"
+                    >Email do remetente</label
+                >
+                <div id="email">
+                    <p>{{ mensagem.email }}</p>
+                </div>
+            </div>
+            <div class="mensagem-text mb-3">
+                <label for="text" class="mb-1 fw-bold"
+                    >Texto do remetente</label
+                >
+                <div id="text">
+                    <p>{{ mensagem.text }}</p>
+                </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button
+                    class="btn btn-outline-light me-md-2"
+                    type="button"
+                    routerLink="../.."
+                >
+                    Voltar
+                </button>
+                <button
+                    class="btn btn-danger"
+                    type="button"
+                    (click)="onMensagemClick(mensagem)"
+                    *ngIf="!mensagem.lida"
+                >
+                    Marcar como lida
+                </button>
+                <button
+                    class="btn btn-danger"
+                    type="button"
+                    (click)="onMensagemClick(mensagem)"
+                    *ngIf="mensagem.lida"
+                >
+                    Marcar como não-lida
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

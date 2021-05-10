@@ -1,0 +1,27 @@
+.mensagem {
+    color: white;
+
+    .mensagem-nome {
+        #nome {
+            border-radius: 5px;
+            padding: 10px 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .mensagem-email {
+        #email {
+            border-radius: 5px;
+            padding: 10px 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .mensagem-text {
+        #text {
+            border-radius: 5px;
+            padding: 10px 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+}

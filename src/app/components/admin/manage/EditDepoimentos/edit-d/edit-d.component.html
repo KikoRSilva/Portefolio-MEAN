@@ -1,0 +1,89 @@
+<div class="blue-box my-5">
+    <div class="container">
+        <h1 class="text-white text-center">Editar depoimento</h1>
+        <form [formGroup]="newDepoimentoForm">
+            <div class="mb-3">
+                <label for="name" class="form-label text-white"
+                    >Alterar nome</label
+                >
+                <input
+                    required
+                    formControlName="name"
+                    type="text"
+                    class="form-control"
+                    id="nameInput"
+                    placeholder="{{ depoimento.name }}"
+                />
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label text-white"
+                    >Alterar título</label
+                >
+                <input
+                    required
+                    formControlName="title"
+                    type="text"
+                    class="form-control"
+                    id="titleInput"
+                    placeholder="{{ depoimento.title }}"
+                />
+            </div>
+            <div class="mb-3">
+                <label for="texto" class="form-label text-white"
+                    >Alterar texto</label
+                >
+                <textarea
+                    required
+                    formControlName="text"
+                    type="text"
+                    class="form-control"
+                    id="texto"
+                    placeholder="{{ depoimento.text }}"
+                    rows="5"
+                ></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label text-white"
+                    >Alterar imagem</label
+                >
+                <input
+                    formControlName="profilePic"
+                    required
+                    type="text"
+                    class="form-control"
+                    id="imageInput"
+                    placeholder="{{ depoimento.profilePic }}"
+                />
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button
+                    class="btn btn-outline-light me-md-2"
+                    type="button"
+                    routerLink="../.."
+                >
+                    Cancelar
+                </button>
+                <button
+                    class="btn btn-danger"
+                    type="submit"
+                    (click)="sendForm()"
+                    [disabled]="!newDepoimentoForm.valid"
+                >
+                    Alterar
+                </button>
+            </div>
+            <div *ngIf="errorMessage" class="mt-2">
+                <div class="alert alert-warning" role="alert">
+                    <i class="fas fa-times"></i> Algo correu mal... Tente
+                    novamente!
+                </div>
+            </div>
+            <div *ngIf="successMessage" class="mt-2">
+                <div class="alert alert-success" role="alert">
+                    <i class="fas fa-check"></i> Depoimento atualizado com
+                    sucesso!
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

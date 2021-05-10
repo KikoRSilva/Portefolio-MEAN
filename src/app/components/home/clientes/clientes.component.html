@@ -1,0 +1,57 @@
+<div id="clientes" class="block-alt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+                <div class="row">
+                    <div
+                        class="col-md-4 col-6 mb-4"
+                        *ngFor="let cliente of clientes"
+                    >
+                        <a
+                            href="{{ cliente.link }}"
+                            class="link-cliente"
+                            target="_blank"
+                        >
+                            <img
+                                [src]="cliente.img"
+                                class="img-fluid"
+                                alt="{{ cliente.nome }}"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 align-self-center">
+                <div class="cliente-text ml-5">
+                    <div class="imagem">
+                        <img src="/assets/3198763.png" />
+                        <div class="d-inline-block pl-md-0 pl-3">
+                            <span>2</span>
+                            Anos de Experiência
+                            <a
+                                class="btn btn-dark-blue btn-sm my-1"
+                                [href]="download.url"
+                                [download]="download.filename"
+                            >
+                                <i class="fas fa-download me-1"></i> Curriculum
+                                Vitae
+                            </a>
+                        </div>
+                    </div>
+                    <div class="telefone">
+                        <img
+                            class="img-fluid"
+                            src="/assets/Paomedia-Small-N-Flat-Phone.ico"
+                            alt="telephone"
+                            id="telefone"
+                        />
+                        <div class="d-inline-block pl-3">
+                            <span>(+351) 936 695 065</span>
+                            Atendimento de segunda a sexta, das 9h às 19h
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

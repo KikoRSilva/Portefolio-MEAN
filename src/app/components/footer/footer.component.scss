@@ -1,0 +1,30 @@
+footer .slogan h1 {
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.social-icons p.field button {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+    border-radius: 25px;
+    color: #f02d3a;
+    margin-left: 10px;
+}
+
+.social-icons p.field button:hover {
+    color: #eee;
+    border-radius: 50%;
+    background-color: rgb(40, 48, 67);
+    border: none;
+}
+
+.copyrights h5 {
+    font-weight: 100;
+}

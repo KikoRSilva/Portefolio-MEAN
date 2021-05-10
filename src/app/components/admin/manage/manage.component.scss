@@ -1,0 +1,40 @@
+.projeto {
+    display: flex;
+    padding: 15px 20px;
+    margin-top: 5px;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: 0 0 0 5px #eeeeee;
+        border-bottom: none;
+
+        .projeto-text a p {
+            color: #6b6d75;
+        }
+        .projeto-buttons {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    .projeto-text {
+        display: flex;
+        flex-grow: 1;
+
+        a p {
+            color: #141619;
+        }
+    }
+
+    .projeto-buttons {
+        transition: opacity 0.2s, transform 0.2s;
+        opacity: 0;
+        transform: scale(0.85);
+    }
+}

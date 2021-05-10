@@ -1,0 +1,29 @@
+<div id="servicos" class="block">
+    <div class="container align-self-center">
+        <div class="card-group shadow">
+            <div *ngFor="let card of cardGroup" class="card text-center px-2">
+                <img
+                    class="card-img-top mt-5 mb-4 img-fluid mini-logo align-self-center"
+                    [src]="card.src"
+                    alt="Image for {{ card.title }}"
+                />
+                <div class="card-body">
+                    <h1 class="card-title">{{ card.title }}</h1>
+                    <p class="card-text">{{ card.text }}</p>
+                    <p class="list-title">Linguagens:</p>
+                    <p>{{ card.linguagens }}</p>
+                    <p class="list-title">Ferramentas:</p>
+                    <ul class="list-group list-group-flush">
+                        <a
+                            *ngFor="let ferramenta of card.ferramentas"
+                            href="{{ ferramenta.link }}"
+                            class="list-group-item link"
+                            target="_blank"
+                            ><li>{{ ferramenta.name }}</li></a
+                        >
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

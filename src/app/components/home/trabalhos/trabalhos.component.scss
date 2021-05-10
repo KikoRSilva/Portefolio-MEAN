@@ -1,0 +1,136 @@
+$red: #dd0426;
+$dark-blue: rgb(40, 48, 67);
+
+#trabalhos .badge {
+    font-weight: 400;
+}
+
+#trabalhos .element-item img {
+    border-radius: 5px;
+    transition: all ease-out 0.2s;
+}
+
+#trabalhos .element-item img:hover {
+    box-shadow: 0 0 20px 0 rgba(40, 48, 67, 0.364);
+    transform: scale(1.05);
+}
+#trabalhos .element-item a.underline {
+    text-decoration: none;
+    cursor: pointer;
+}
+#trabalhos .button-group {
+    margin-bottom: 30px;
+}
+
+#trabalhos .button-group button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+
+#trabalhos .button-group button + button {
+    margin-left: 30px;
+}
+
+#trabalhos .button-group button.active {
+    color: $red;
+}
+
+/************************ Languages Hover Styling ********************************/
+/****** PYTHON *******/
+#trabalhos .element-item a p.language-python span {
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+#trabalhos .element-item a p.language-python:hover span {
+    display: none;
+}
+#trabalhos .element-item a p.language-python:hover:after {
+    content: "Python";
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+/****** C *******/
+#trabalhos .element-item a p.language-c span {
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+#trabalhos .element-item a p.language-c:hover span {
+    display: none;
+}
+#trabalhos .element-item a p.language-c:hover:after {
+    content: "C";
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+/****** JAVA *******/
+#trabalhos .element-item a p.language-java span {
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+#trabalhos .element-item a p.language-java:hover span {
+    display: none;
+}
+#trabalhos .element-item a p.language-java:hover:after {
+    content: "Java";
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+/****** HTML & CSS *******/
+#trabalhos .element-item a p.language-html-css span {
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+#trabalhos .element-item a p.language-html-css:hover span {
+    display: none;
+}
+#trabalhos .element-item a p.language-html-css:hover:after {
+    content: "HTML & CSS";
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+/****** PYTHON DASH *******/
+#trabalhos .element-item a p.language-python-dash span {
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+#trabalhos .element-item a p.language-python-dash:hover span {
+    display: none;
+}
+#trabalhos .element-item a p.language-python-dash:hover:after {
+    content: "Python Dash";
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+
+/********** ANGULAR TYPESCRIPT *********/
+#trabalhos .element-item a p.language-typescript span {
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+#trabalhos .element-item a p.language-typescript:hover span {
+    display: none;
+}
+#trabalhos .element-item a p.language-typescript:hover:after {
+    content: "Angular Typescript";
+    font-weight: 700;
+    color: $dark-blue;
+    font-size: 1.25rem;
+}
+/****************************************************************/

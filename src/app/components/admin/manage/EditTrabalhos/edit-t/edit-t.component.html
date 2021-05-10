@@ -1,0 +1,126 @@
+<div class="blue-box my-5">
+    <div class="container">
+        <h1 class="text-white text-center">Editar projeto</h1>
+
+        <form [formGroup]="newProjetoForm">
+            <div class="mb-3">
+                <label for="nameInput" class="form-label text-white"
+                    >Alterar nome</label
+                >
+                <input
+                    required
+                    formControlName="name"
+                    type="text"
+                    class="form-control"
+                    id="nameInput"
+                    placeholder="{{ projeto.name }}"
+                />
+            </div>
+            <div class="mb-3">
+                <div formArrayName="type">
+                    <div *ngFor="let t of type.controls; let i = index">
+                        <label for="typeInput" class="form-label text-white"
+                            >Alterar tipo</label
+                        >
+                        <input
+                            required
+                            [formControlName]="i"
+                            type="text"
+                            class="form-control my-2"
+                            id="typeInput"
+                        />
+                        <button (click)="addType()" class="btn btn-danger me-3">
+                            Add
+                        </button>
+                        <button
+                            (click)="removeType(i)"
+                            class="btn btn-outline-danger"
+                        >
+                            Remove
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="linkInput" class="form-label text-white"
+                    >Alterar link</label
+                >
+                <input
+                    required
+                    formControlName="link"
+                    type="text"
+                    class="form-control"
+                    id="linkInput"
+                    placeholder="{{ projeto.link }}"
+                />
+            </div>
+            <div class="mb-3">
+                <label for="imageInput" class="form-label text-white"
+                    >Alterar imagem</label
+                >
+                <input
+                    required
+                    formControlName="image"
+                    type="text"
+                    class="form-control"
+                    id="imageInput"
+                    placeholder="{{ projeto.image }}"
+                />
+            </div>
+            <div class="mb-3">
+                <label for="languageInput" class="form-label text-white"
+                    >Alterar linguagem</label
+                >
+                <input
+                    required
+                    formControlName="language"
+                    type="text"
+                    class="form-control"
+                    id="languageInput"
+                    placeholder="{{ projeto.language }}"
+                />
+            </div>
+            <div class="mb-3">
+                <label for="classesInput" class="form-label text-white"
+                    >Alterar classes</label
+                >
+                <input
+                    required
+                    formControlName="classes"
+                    type="text"
+                    class="form-control"
+                    id="classesInput"
+                    placeholder="{{ projeto.classes }}"
+                />
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button
+                    class="btn btn-outline-light me-md-2"
+                    type="button"
+                    routerLink="../.."
+                >
+                    Cancelar
+                </button>
+                <button
+                    class="btn btn-danger"
+                    type="submit"
+                    (click)="sendForm()"
+                    [disabled]="!newProjetoForm.valid"
+                >
+                    Alterar
+                </button>
+            </div>
+            <div *ngIf="errorMessage" class="mt-2">
+                <div class="alert alert-warning" role="alert">
+                    <i class="fas fa-times"></i> Algo correu mal... Tente
+                    novamente!
+                </div>
+            </div>
+            <div *ngIf="successMessage" class="mt-2">
+                <div class="alert alert-success" role="alert">
+                    <i class="fas fa-check"></i> Projeto atualizado com sucesso!
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

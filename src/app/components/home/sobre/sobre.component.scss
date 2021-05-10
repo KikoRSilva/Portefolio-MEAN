@@ -1,0 +1,17 @@
+@import "../../../../main-styles.scss";
+
+#sobre h1 {
+    margin-top: 7%;
+    font-weight: 700;
+    font-size: 25px;
+    color: $white;
+    font-stretch: condensed;
+}
+
+#sobre h2 {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 20px;
+    color: $white;
+    justify-content: center;
+}

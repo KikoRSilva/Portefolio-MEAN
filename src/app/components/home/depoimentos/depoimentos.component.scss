@@ -1,0 +1,28 @@
+.depoimento {
+    background-color: #e2e2e2;
+    border-radius: 12px;
+    display: flex;
+    padding: 30px;
+
+    img.depoimento-imagem {
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #f02d3a;
+        max-height: 150px;
+        max-width: 150px;
+    }
+}
+
+#depoimentos .depoimento .quote {
+    max-width: 35px;
+}
+
+#depoimentos .depoimento .name {
+    color: #aaaaaa;
+}
+
+#depoimentos .depoimento .name span {
+    color: #000;
+    font-weight: 700;
+}

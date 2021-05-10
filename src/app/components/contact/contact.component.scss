@@ -1,0 +1,111 @@
+.avatar-contact {
+    height: 220px;
+    margin: -80px auto 30px;
+    z-index: 10;
+}
+
+.is-planner {
+    border-bottom: 1px solid #e6ecf8;
+}
+
+#form-page .top-form h1 {
+    font-weight: 400;
+}
+
+#form-page .bottom-form .container form {
+    max-width: 640px;
+    margin: 32px auto 0;
+}
+
+#form-page .bottom-form #invisible-recaptcha-form label.label {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: rgba(41, 51, 71, 0.65);
+}
+
+.label:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.control {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: left;
+}
+
+.bottom-form .container form input.is-large {
+    font-size: 1.4rem;
+}
+.bottom-form .container form input {
+    border-color: #e6ecf8;
+    color: var(--dark-blue);
+    box-shadow: none;
+    font-weight: 300;
+}
+.textarea {
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    padding: calc(0.75em -1px);
+    resize: vertical;
+}
+.input,
+.textarea {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 1px solid rgba(41, 51, 71, 0.111);
+    display: inline-flex;
+    height: 2.5em;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: calc(0.75em - 1px);
+    padding-right: calc(0.75em - 1px);
+    padding-top: calc(0.5em - 1px);
+    position: relative;
+    vertical-align: top;
+}
+
+.control.is-expanded {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#form-page .bottom-form .container form button {
+    margin: 20px 0px;
+    border-width: 2px;
+    font-weight: 400;
+    height: auto;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    text-align: center;
+    justify-content: center;
+}
+
+.button.is-fullwidth {
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+}
+
+.textarea[rows] {
+    height: initial;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid rgba(255, 0, 0, 0.473);
+    color: white;
+}
+
+input.ng-valid.ng-touched {
+    border: 1px solid rgba(1, 168, 1, 0.473);
+    color: white;
+}

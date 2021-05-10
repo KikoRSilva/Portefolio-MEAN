@@ -1,0 +1,32 @@
+<div id="slider" class="animate-fadeUp mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-self-center text-center">
+                <h1>Desenvolvedor de Sofware &amp; Web</h1>
+                <h2>
+                    Eu <strong>programo</strong> e crio
+                    <strong>aplicações</strong>, e adoro o que faço.
+                </h2>
+
+                <div class="epicentro position-relative">
+                    <img
+                        *ngFor="let language of languageLogos"
+                        src="{{ language }}"
+                        class="small el position-absolute start-50 top-50"
+                        [ngClass]="{ 'visually-hidden': !running }"
+                    />
+                    <img
+                        class="img-fluid avatar"
+                        [src]="avatar"
+                        alt="avatar"
+                        (click)="startAnimation()"
+                        placement="right"
+                        ngbTooltip="Clique-me!"
+                        tooltipClass="my-custom-class"
+                    />
+                </div>
+                <img class="img-fluid hero" [src]="hero" alt="hero" />
+            </div>
+        </div>
+    </div>
+</div>

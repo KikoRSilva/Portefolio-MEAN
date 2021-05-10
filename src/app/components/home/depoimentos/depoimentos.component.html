@@ -1,0 +1,38 @@
+<div id="depoimentos" class="block">
+    <div class="container">
+        <h2 class="title text-center">Depoimentos</h2>
+        <h4 class="subtitle text-center">
+            Eis alguns depoimentos de clientes que usufruiram dos meus serviços.
+        </h4>
+        <br />
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let depoimento of depoimentos">
+                <ng-template carouselSlide>
+                    <div class="depoimento">
+                        <img
+                            src="{{ depoimento.profilePic }}"
+                            alt="{{ depoimento.name }}'s profile image"
+                            class="depoimento-imagem align-self-center"
+                        />
+                        <div class="depoimento-texto ps-3">
+                            <p>
+                                {{ depoimento.text }}
+                            </p>
+                            <p class="name">
+                                <span>{{ depoimento.name }}</span> /
+                                {{ depoimento.title }}
+                            </p>
+                            <p class="mb-0">
+                                <img
+                                    src="/assets/quote.svg"
+                                    alt="quote image"
+                                    class="quote float-end"
+                                />
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+</div>

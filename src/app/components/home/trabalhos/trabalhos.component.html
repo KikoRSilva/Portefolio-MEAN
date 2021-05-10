@@ -1,0 +1,53 @@
+<div id="trabalhos" class="block">
+    <div class="container">
+        <h2 class="text-center title">Trabalhos Recentes</h2>
+        <h4 class="subtitle text-center mb-4">
+            Aqui estão alguns do projetos que desenvolvi recentemente. Quer ver
+            mais?
+            <a
+                href="mailto:francisco.r.e.silva@tecnico.ulisboa.pt"
+                class="email-me"
+                >Mande me um email</a
+            >.
+        </h4>
+
+        <div class="button-group">
+            <button type="button" class="active" data-filter="*">Todos</button>
+            <button type="button" data-filter=".website">Websites</button>
+            <button type="button" data-filter=".email">Emails</button>
+            <button type="button" data-filter=".app">Aplicações</button>
+            <button type="button" data-filter=".jogo">Jogos</button>
+        </div>
+
+        <div class="row grid">
+            <div
+                *ngFor="let trabalho of trabalhos"
+                class="col-lg-4 col-6 mb-4 element-item {{ trabalho.classes }}"
+            >
+                <a
+                    href="{{ trabalho.image }}"
+                    class="popup-link"
+                    target="_blank"
+                >
+                    <img
+                        src="{{ trabalho.image }}"
+                        alt="{{ trabalho.name }}"
+                        class="img-fluid mb-3"
+                    />
+                </a>
+                <a href="{{ trabalho.link }}" class="underline" target="_blank">
+                    <p class="nb-1 language-{{ trabalho.language }}">
+                        <span>{{ trabalho.name }}</span>
+                    </p></a
+                >
+                <p class="mb-0">
+                    <span
+                        class="badge bg-secundary text-white fw-bold mx-2"
+                        *ngFor="let type of trabalho.type"
+                        >{{ type | titlecase }}</span
+                    >
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

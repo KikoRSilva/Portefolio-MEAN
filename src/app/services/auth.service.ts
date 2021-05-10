@@ -34,9 +34,8 @@ export class AuthService {
     }
 
     isValidUser(): Observable<HttpResponse<any>> {
-        console.log(this.getRefreshToken(), this.getUserId());
         return this.http
-            .get('users', {
+            .get(`${this.webService.ROOT_URL}/users/valid`, {
                 headers: {
                     'x-refresh-token': this.getRefreshToken(),
                     _id: this.getUserId(),

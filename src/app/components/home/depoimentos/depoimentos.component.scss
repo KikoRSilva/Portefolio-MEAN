@@ -1,7 +1,6 @@
 .depoimento {
     background-color: #e2e2e2;
     border-radius: 12px;
-    display: flex;
     padding: 30px;
 
     img.depoimento-imagem {
@@ -11,6 +10,11 @@
         border-color: #f02d3a;
         max-height: 150px;
         max-width: 150px;
+    }
+
+    .depoimento-texto {
+        text-align: justify;
+        text-justify: inter-word;
     }
 }
 

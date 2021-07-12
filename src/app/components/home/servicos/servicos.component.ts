@@ -1,21 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Card } from 'src/app/shared/card.model';
+// import { gsap } from 'gsap';
 
 @Component({
     selector: 'app-servicos',
     templateUrl: './servicos.component.html',
     styleUrls: ['./servicos.component.scss'],
 })
-export class ServicosComponent implements OnInit {
+export class ServicosComponent implements AfterViewInit {
     constructor() {}
-    ngOnInit(): void {}
+
+    ngAfterViewInit() {
+        // gsap.from('#card-group', {
+        //     scrollTrigger: {
+        //         trigger: '#card-group',
+        //         toggleActions: 'play none none none',
+        //         scrub: 3,
+        //     },
+        //     scale: 0.95,
+        //     y: 500,
+        //     duration: 2.2,
+        //     ease: 'easeIn',
+        // });
+    }
 
     cardGroup: Card[] = [
         {
             src: '/assets/ux-interface.png',
             title: 'Desenvolvedor Frontend',
-            text:
-                'Tenho facilidade em desenvolver a partir de um esboço até ao produto final de forma a trazer novas ideias para o browser.',
+            text: 'Tenho facilidade em desenvolver a partir de um esboço até ao produto final de forma a trazer novas ideias para o browser.',
             linguagens: 'HTML, CSS, Sass, Javascript, Typescript',
             ferramentas: [
                 {
@@ -43,8 +56,7 @@ export class ServicosComponent implements OnInit {
         {
             src: '/assets/backend.png',
             title: 'Desenvolvedor Backend',
-            text:
-                'Poder criar a estrutura e o mecanismo de uma aplicação fascina-me. É trabalhoso criar todas as ligações necessárias, mas eu gosto.',
+            text: 'Poder criar a estrutura e o mecanismo de uma aplicação fascina-me. É trabalhoso criar todas as ligações necessárias, mas eu gosto.',
             linguagens: 'Python, Javascript, PHP, Java, SQL, MongoDB, NodeJs',
             ferramentas: [
                 {
@@ -72,8 +84,7 @@ export class ServicosComponent implements OnInit {
         {
             src: '/assets/app-development.png',
             title: 'Desenvolvedor de Apliacações',
-            text:
-                'Sempre me interessei em desenvolver aplicações e tento sempre melhorar o meu conhecimento nesta área.',
+            text: 'Sempre me interessei em desenvolver aplicações e tento sempre melhorar o meu conhecimento nesta área.',
             linguagens: 'Python, Flutter, Java, C, Typecript',
             ferramentas: [
                 {

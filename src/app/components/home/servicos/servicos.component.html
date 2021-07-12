@@ -1,14 +1,22 @@
 <div id="servicos" class="block">
     <div class="container align-self-center">
-        <div class="card-group shadow">
+        <div class="card-group shadow" id="card-group">
             <div *ngFor="let card of cardGroup" class="card text-center px-2">
                 <img
-                    class="card-img-top mt-5 mb-4 img-fluid mini-logo align-self-center"
+                    class="
+                        card-img-top
+                        mt-5
+                        mb-4
+                        img-fluid
+                        mini-logo
+                        align-self-center
+                    "
                     [src]="card.src"
                     alt="Image for {{ card.title }}"
                 />
                 <div class="card-body">
                     <h1 class="card-title">{{ card.title }}</h1>
+                    <br />
                     <p class="card-text">{{ card.text }}</p>
                     <p class="list-title">Linguagens:</p>
                     <p>{{ card.linguagens }}</p>

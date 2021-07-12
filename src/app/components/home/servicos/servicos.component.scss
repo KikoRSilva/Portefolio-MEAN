@@ -22,6 +22,10 @@
 }
 
 .card {
+    .card-text {
+        text-align: justify;
+        text-justify: inter-word;
+    }
     &:hover {
         .card-body {
             transform: scale(1.05);

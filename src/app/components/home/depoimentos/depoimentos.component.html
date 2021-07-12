@@ -9,26 +9,36 @@
             <ng-container *ngFor="let depoimento of depoimentos">
                 <ng-template carouselSlide>
                     <div class="depoimento">
-                        <img
-                            src="{{ depoimento.profilePic }}"
-                            alt="{{ depoimento.name }}'s profile image"
-                            class="depoimento-imagem align-self-center"
-                        />
-                        <div class="depoimento-texto ps-3">
-                            <p>
-                                {{ depoimento.text }}
-                            </p>
-                            <p class="name">
-                                <span>{{ depoimento.name }}</span> /
-                                {{ depoimento.title }}
-                            </p>
-                            <p class="mb-0">
-                                <img
-                                    src="/assets/quote.svg"
-                                    alt="quote image"
-                                    class="quote float-end"
-                                />
-                            </p>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="mx-auto">
+                                    <img
+                                        src="{{ depoimento.profilePic }}"
+                                        alt="{{
+                                            depoimento.name
+                                        }}'s profile image"
+                                        class="depoimento-imagem"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="depoimento-texto ps-3">
+                                    <p>
+                                        {{ depoimento.text }}
+                                    </p>
+                                    <p class="name">
+                                        <span>{{ depoimento.name }}</span> /
+                                        {{ depoimento.title }}
+                                    </p>
+                                    <p class="mb-0">
+                                        <img
+                                            src="/assets/quote.svg"
+                                            alt="quote image"
+                                            class="quote float-end"
+                                        />
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </ng-template>

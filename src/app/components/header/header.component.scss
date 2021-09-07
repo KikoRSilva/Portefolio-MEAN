@@ -5,6 +5,7 @@ $blue: #9197ae;
     height: 25%;
     background-color: transparent;
     transition: background ease-out 0.2s;
+    z-index: 1;
 }
 
 #header.active {

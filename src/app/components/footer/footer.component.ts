@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
-    logo: string = '/assets/logo_size_invert_1.png';
+    logo: string = '/assets/logo-v2-inverse.png';
     constructor() {}
 
     ngOnInit(): void {}

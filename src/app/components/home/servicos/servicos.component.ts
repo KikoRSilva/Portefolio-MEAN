@@ -83,7 +83,7 @@ export class ServicosComponent implements AfterViewInit {
         },
         {
             src: '/assets/app-development.png',
-            title: 'Desenvolvedor de Apliacações',
+            title: 'Desenvolvedor de Aplicações',
             text: 'Sempre me interessei em desenvolver aplicações e tento sempre melhorar o meu conhecimento nesta área.',
             linguagens: 'Python, Flutter, Java, C, Typecript',
             ferramentas: [

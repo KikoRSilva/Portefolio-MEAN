@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-    logo: string = '/assets/logo_size.png';
+    logo: string = '/assets/logo-v2-blue.png';
     isNavbarCollapsed = true;
     constructor() {}
 

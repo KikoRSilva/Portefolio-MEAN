@@ -7,7 +7,7 @@ import anime from 'animejs/lib/anime.es.js';
     styleUrls: ['./slider.component.scss'],
 })
 export class SliderComponent implements OnInit, AfterViewInit {
-    avatar: string = '/assets/avatar.png';
+    avatar: string = '/assets/logo-v2.png';
     hero: string = '/assets/hero1.png';
     animation: any;
     running: boolean = false;

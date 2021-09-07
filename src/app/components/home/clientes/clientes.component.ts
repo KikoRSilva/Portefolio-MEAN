@@ -28,7 +28,7 @@ export class ClientesComponent implements AfterViewInit {
         },
     ];
 
-    download: any = { url: '/assets/CV-01-21.pdf', filename: 'CV-01-21.pdf' };
+    download: any = { url: '/assets/CV-09-21.pdf', filename: 'CV-09-21.pdf' };
 
     ngAfterViewInit(): void {
         var element = document.getElementById('telefone');

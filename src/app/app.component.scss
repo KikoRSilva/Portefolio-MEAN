@@ -1,0 +1,36 @@
+.cookie-container {
+    position: fixed;
+    max-width: 65%;
+    bottom: -100%;
+    left: 25%;
+    right: 25%;
+    background: #283043;
+    color: #fefefe;
+    padding: 10px 32px;
+    -webkit-box-shadow: 0px 7px 9px 0px rgba(40, 48, 67, 0.63);
+    box-shadow: 0px 7px 9px 0px rgba(40, 48, 67, 0.63);
+    border-radius: 12px;
+
+    transition: all 400ms ease-in-out;
+
+    a {
+        color: #fefefe;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    button.cookie-btn {
+        background: #ff4136;
+        border: 0;
+        color: #fefefe;
+        padding: 12px 40px;
+        font-size: 18px;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
+.cookie-container.active {
+    bottom: 10px;
+}

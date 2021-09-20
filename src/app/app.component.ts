@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    title = 'frontend';
+    cookieContainer = false;
+
+    constructor() {
+        setTimeout(() => this.displayCookieContainer(), 2000);
+    }
+
+    cookieButtonClicked() {
+        this.cookieContainer = !this.cookieContainer;
+        localStorage.setItem('cookieConsentAccepted', 'true');
+    }
+
+    displayCookieContainer() {
+        if (localStorage.getItem('cookieConsentAccepted') !== 'true')
+            this.cookieContainer = !this.cookieContainer;
+    }
 }

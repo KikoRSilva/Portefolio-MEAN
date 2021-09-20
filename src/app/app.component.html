@@ -2,3 +2,13 @@
 <router-outlet></router-outlet>
 <app-scroll-top></app-scroll-top>
 <app-footer></app-footer>
+
+<div class="cookie-container" [ngClass]="{ active: cookieContainer === true }">
+    <p>
+        Usamos cookies neste site para poder usufruir da melhor experiência
+        possível. Toda a informação obtida estará protegida ao abrigo da Lei de
+        Proteção de Dados. Para saber mais, leia as nossas
+        <a>políticas de privacidade</a> e <a>políticas de cookies</a>.
+    </p>
+    <button class="cookie-btn" (click)="cookieButtonClicked()">Aceito</button>
+</div>

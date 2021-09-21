@@ -29,6 +29,16 @@ footer .slogan h1 {
 
 .copyrights h5 {
     font-weight: 100;
+
+    a {
+        text-decoration: none;
+        color: #fefefe;
+        cursor: pointer;
+
+        &:hover {
+            color: #aaaaaa;
+        }
+    }
 }
 
 a.logo img {

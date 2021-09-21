@@ -6,9 +6,13 @@
 <div class="cookie-container" [ngClass]="{ active: cookieContainer === true }">
     <p>
         Usamos cookies neste site para poder usufruir da melhor experiência
-        possível. Toda a informação obtida estará protegida ao abrigo da Lei de
-        Proteção de Dados. Para saber mais, leia as nossas
-        <a>políticas de privacidade</a> e <a>políticas de cookies</a>.
+        possível. Ao continuar a usar este site, aceita a utilização dos
+        cookies. Para saber mais, leia as nossas
+        <a routerLink="/politicas/privacidade">políticas de privacidade</a> e
+        <a>políticas de cookies</a>.
     </p>
     <button class="cookie-btn" (click)="cookieButtonClicked()">Aceito</button>
+    <button class="close-btn" (click)="cookieButtonClicked()">
+        <i class="fas fa-times"></i>
+    </button>
 </div>

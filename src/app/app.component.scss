@@ -1,7 +1,7 @@
 .cookie-container {
     position: fixed;
     max-width: 65%;
-    bottom: -100%;
+    bottom: -150%;
     left: 25%;
     right: 25%;
     background: #283043;
@@ -17,6 +17,11 @@
         color: #fefefe;
         text-decoration: underline;
         cursor: pointer;
+
+        &:hover {
+            color: #aaaaaa;
+            text-decoration: none;
+        }
     }
 
     button.cookie-btn {
@@ -28,6 +33,15 @@
         margin-bottom: 16px;
         border-radius: 8px;
         cursor: pointer;
+    }
+
+    button.close-btn {
+        position: absolute;
+        background: transparent;
+        border: 0;
+        color: #fefefe;
+        top: 2px;
+        right: 5px;
     }
 }
 

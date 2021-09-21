@@ -10,6 +10,7 @@ import { NewTrabalhoComponent } from './components/admin/manage/new-trabalho/new
 import { NewDepoimentoComponent } from './components/admin/manage/new-depoimento/new-depoimento.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ViewMessageComponent } from './components/admin/manage/view-message/view-message.component';
+import { PrivacyComponent } from './components/privacy/privacy.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -39,6 +40,10 @@ const routes: Routes = [
     {
         path: 'admin/manage/mensagens/:id',
         component: ViewMessageComponent,
+    },
+    {
+        path: 'politicas/privacidade',
+        component: PrivacyComponent,
     },
     {
         path: '**',

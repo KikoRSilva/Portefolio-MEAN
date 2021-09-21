@@ -1,0 +1,22 @@
+.title {
+    text-align: center;
+
+    h1 {
+        font-size: 4em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+}
+ul {
+    list-style: disc;
+
+    li {
+        text-align: start;
+        color: rgb(40, 48, 67);
+    }
+}
+
+.rastreamento a {
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -2,7 +2,7 @@
     text-align: center;
 
     h1 {
-        font-size: 4em;
+        font-size: 3em;
         font-weight: 900;
         text-transform: uppercase;
     }
@@ -19,4 +19,9 @@ ul {
 .rastreamento a {
     text-decoration: underline;
     cursor: pointer;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
 }

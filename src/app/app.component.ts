@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { CookieServiceService } from './services/cookie-service.service';
 
 @Component({
     selector: 'app-root',
@@ -8,17 +9,24 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class AppComponent {
     cookieContainer = false;
 
-    constructor() {
-        setTimeout(() => this.displayCookieContainer(), 2000);
+    constructor(private cookieService: CookieServiceService) {
+        if (!this.cookieContainer)
+            setTimeout(() => this.displayCookieContainer(), 2000);
     }
 
     cookieButtonClicked() {
         this.cookieContainer = !this.cookieContainer;
-        localStorage.setItem('cookieConsentAccepted', 'true');
+        this.cookieService.cookieButtonClicked();
     }
 
     displayCookieContainer() {
-        if (localStorage.getItem('cookieConsentAccepted') !== 'true')
+        if (!this.cookieService.getConsented())
             this.cookieContainer = !this.cookieContainer;
+    }
+
+    receiveEvent($event) {
+        if ($event) {
+            this.displayCookieContainer();
+        }
     }
 }

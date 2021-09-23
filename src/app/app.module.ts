@@ -35,6 +35,7 @@ import { NewDepoimentoComponent } from './components/admin/manage/new-depoimento
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ViewMessageComponent } from './components/admin/manage/view-message/view-message.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { CookiesComponent } from './components/cookies/cookies.component';
 
 @NgModule({
     declarations: [
@@ -62,6 +63,7 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
         PageNotFoundComponent,
         ViewMessageComponent,
         PrivacyComponent,
+        CookiesComponent,
     ],
     imports: [
         BrowserModule,

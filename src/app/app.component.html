@@ -1,5 +1,5 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<router-outlet (popupEvent)="receiveEvent($event)"></router-outlet>
 <app-scroll-top></app-scroll-top>
 <app-footer></app-footer>
 
@@ -9,7 +9,7 @@
         possível. Ao continuar a usar este site, aceita a utilização dos
         cookies. Para saber mais, leia as nossas
         <a routerLink="/politicas/privacidade">políticas de privacidade</a> e
-        <a>políticas de cookies</a>.
+        <a routerLink="/politicas/cookies">políticas de cookies</a>.
     </p>
     <button class="cookie-btn" (click)="cookieButtonClicked()">Aceito</button>
     <button class="close-btn" (click)="cookieButtonClicked()">

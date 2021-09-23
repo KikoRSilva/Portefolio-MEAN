@@ -1,0 +1,23 @@
+.title {
+    text-align: center;
+
+    h1 {
+        font-size: 3em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+}
+
+.gerirCookies {
+    color: red;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    &:hover {
+        color: rgb(204, 0, 0);
+    }
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}

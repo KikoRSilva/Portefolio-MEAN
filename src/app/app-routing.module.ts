@@ -11,6 +11,7 @@ import { NewDepoimentoComponent } from './components/admin/manage/new-depoimento
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ViewMessageComponent } from './components/admin/manage/view-message/view-message.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { CookiesComponent } from './components/cookies/cookies.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -44,6 +45,10 @@ const routes: Routes = [
     {
         path: 'politicas/privacidade',
         component: PrivacyComponent,
+    },
+    {
+        path: 'politicas/cookies',
+        component: CookiesComponent,
     },
     {
         path: '**',
